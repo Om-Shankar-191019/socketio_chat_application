@@ -1,11 +1,10 @@
 import React from "react";
-// import Cht from "../components/Cht";
 
-import MessageForm from "../components/MessageForm";
 const rooms = ["first room", "mern stack", "flutter"];
-const Chat = () => {
+const Cht = () => {
   return (
     <div class="container mx-auto shadow-lg rounded-lg my-4">
+      {/* <!-- Chatting --> */}
       <div class="flex flex-row justify-between bg-white">
         {/* <!-- chat list --> */}
         <div class="flex flex-col w-2/5 border-r-2 overflow-y-auto">
@@ -33,11 +32,75 @@ const Chat = () => {
               <span class="text-gray-500">Pick me at 9:00 Am</span>
             </div>
           </div>
+          <div class="flex flex-row py-4 px-2 items-center border-b-2">
+            <div class="w-1/4">
+              <img
+                src="https://source.unsplash.com/otT2199XwI8/600x600"
+                class="object-cover h-12 w-12 rounded-full"
+                alt=""
+              />
+            </div>
+            <div class="w-full">
+              <div class="text-lg font-semibold">Everest Trip 2021</div>
+              <span class="text-gray-500">Hi Sam, Welcome</span>
+            </div>
+          </div>
+          <div class="flex flex-row py-4 px-2 items-center border-b-2 border-l-4 border-blue-400">
+            <div class="w-1/4">
+              <img
+                src="https://source.unsplash.com/L2cxSuKWbpo/600x600"
+                class="object-cover h-12 w-12 rounded-full"
+                alt=""
+              />
+            </div>
+            <div class="w-full">
+              <div class="text-lg font-semibold">MERN Stack</div>
+              <span class="text-gray-500">Lusi : Thanks Everyone</span>
+            </div>
+          </div>
+          <div class="flex flex-row py-4 px-2 items-center border-b-2">
+            <div class="w-1/4">
+              <img
+                src="https://source.unsplash.com/vpOeXr5wmR4/600x600"
+                class="object-cover h-12 w-12 rounded-full"
+                alt=""
+              />
+            </div>
+            <div class="w-full">
+              <div class="text-lg font-semibold">Javascript Indonesia</div>
+              <span class="text-gray-500">Evan : some one can fix this</span>
+            </div>
+          </div>
+          <div class="flex flex-row py-4 px-2 items-center border-b-2">
+            <div class="w-1/4">
+              <img
+                src="https://source.unsplash.com/vpOeXr5wmR4/600x600"
+                class="object-cover h-12 w-12 rounded-full"
+                alt=""
+              />
+            </div>
+            <div class="w-full">
+              <div class="text-lg font-semibold">Javascript Indonesia</div>
+              <span class="text-gray-500">Evan : some one can fix this</span>
+            </div>
+          </div>
 
+          <div class="flex flex-row py-4 px-2 items-center border-b-2">
+            <div class="w-1/4">
+              <img
+                src="https://source.unsplash.com/vpOeXr5wmR4/600x600"
+                class="object-cover h-12 w-12 rounded-full"
+                alt=""
+              />
+            </div>
+            <div class="w-full">
+              <div class="text-lg font-semibold">Javascript Indonesia</div>
+              <span class="text-gray-500">Evan : some one can fix this</span>
+            </div>
+          </div>
           {/* <!-- end user list --> */}
         </div>
         {/* <!-- end chat list --> */}
-
         {/* <!-- message --> */}
         <div class="w-full px-5 flex flex-col justify-between">
           <div class="flex flex-col mt-5">
@@ -93,15 +156,20 @@ const Chat = () => {
               </div>
             </div>
           </div>
-          <MessageForm />
+          <div class="py-5">
+            <input
+              class="w-full bg-gray-300 py-5 px-3 rounded-xl"
+              type="text"
+              placeholder="type your message here..."
+            />
+          </div>
         </div>
         {/* <!-- end message --> */}
-
         <div class="w-2/5 border-l-2 px-5">
           <div class="flex flex-col">
             <div class="font-semibold text-xl py-4">Available Rooms</div>
             {rooms.map((item, index) => (
-              <div key={`availablerooms - ${index}`} className="cursor-pointer">
+              <div key={`availablerooms - ${index}`}>
                 <span className="border-b-2 px-2">{item}</span>
               </div>
             ))}
@@ -112,4 +180,4 @@ const Chat = () => {
   );
 };
 
-export default Chat;
+export default Cht;
